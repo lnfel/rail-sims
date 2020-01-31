@@ -1,5 +1,5 @@
 Data Models
-	student
+	student has_one :address
 		id
 		student_id_prefix
 		student_id
@@ -22,6 +22,7 @@ Data Models
 		blood_type
 		weight
 		height
+		photo Ex. ActiveStorage file
 		father_name
 		father_last_name
 		father_middle_name
@@ -35,9 +36,10 @@ Data Models
 		guardian_contact_number[]
 		created_at
 		modified_at
+		modified_by_account_type
 		modified_by_id
 
-	address
+	address belongs_to :student, belongs_to :faculty
 		id
 		house_number
 		block
@@ -57,12 +59,39 @@ Data Models
 		zip_code
 		created_at
 		modified_at
+		modified_by_account_type
 		modified_by_id
 
-		account
-			
+	account
+		id
+		type_id
+		reference_id Ex. account.type_id [1 => Student] then account.reference_id = Student.find_by(:student_id)
+		username
+		password
+		status
+		security_question[] Ex. account.security_question[0 => account.security_answer[0]]
+		security_answer[]
+		theme_id
+		created_at
+		modified_at
+		modified_by_account_type
+		modified_by_id
 
-		account_type
-			id
-			name [ Super Admin, Administrator, Employee, Faculty, Faculty Head, HR, IT, Admission, Registrar, Guidance, Student ]
-			description	
+	account_type
+		id
+		name [ Super Admin, Administrator, Employee, Faculty, Faculty Head, HR, IT, Admission, Registrar, Guidance, Student ]
+		description
+		created_at
+		modified_at
+		modified_by_account_type
+		modified_by_id
+
+	theme
+		id
+		name
+		description
+		created_at
+		modified_at
+		modified_by_account_type
+		modified_by_id
+
