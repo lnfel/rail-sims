@@ -1,0 +1,75 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student_id_prefix: MyString
+  student_id: MyString
+  first_name: MyString
+  last_name: MyString
+  middle_name: MyString
+  name_prefix: MyString
+  name_suffix: MyString
+  status: MyString
+  address: one
+  telephone_number: MyString
+  mobile_number: MyString
+  email: MyString
+  birthdate: 2020-02-02
+  birthplace: MyString
+  civil_status: one
+  gender: one
+  religion: MyString
+  nationality: MyString
+  blood_type: MyString
+  weight: 1
+  height: 1.5
+  father_name: MyString
+  father_last_name: MyString
+  father_middle_name: MyString
+  father_contact_number: MyString
+  mother_name: MyString
+  mother_maiden_last_name: MyString
+  mother_maiden_middle_name: MyString
+  mother_contact_number: MyString
+  guardian_fullname: MyString
+  guardian_relationship: one
+  guardian_contact_number: MyString
+  modified_at: 2020-02-02 06:39:24
+  modified_by_account_type: one
+  modified_by: one
+
+two:
+  student_id_prefix: MyString
+  student_id: MyString
+  first_name: MyString
+  last_name: MyString
+  middle_name: MyString
+  name_prefix: MyString
+  name_suffix: MyString
+  status: MyString
+  address: two
+  telephone_number: MyString
+  mobile_number: MyString
+  email: MyString
+  birthdate: 2020-02-02
+  birthplace: MyString
+  civil_status: two
+  gender: two
+  religion: MyString
+  nationality: MyString
+  blood_type: MyString
+  weight: 1
+  height: 1.5
+  father_name: MyString
+  father_last_name: MyString
+  father_middle_name: MyString
+  father_contact_number: MyString
+  mother_name: MyString
+  mother_maiden_last_name: MyString
+  mother_maiden_middle_name: MyString
+  mother_contact_number: MyString
+  guardian_fullname: MyString
+  guardian_relationship: two
+  guardian_contact_number: MyString
+  modified_at: 2020-02-02 06:39:24
+  modified_by_account_type: two
+  modified_by: two

@@ -9,14 +9,14 @@ Data Models
 		name_prefix
 		name_suffix
 		status
-		address_id
+		address_id address:references
 		telephone_number
 		mobile_number[]
 		email
 		birthdate
 		birthplace
-		civil_status
-		gender
+		civil_status_id civil_status:references
+		gender gender:references
 		religion
 		nationality
 		blood_type
@@ -35,9 +35,11 @@ Data Models
 		guardian_relationship_id
 		guardian_contact_number[]
 		created_at
-		modified_at
-		modified_by_account_type
-		modified_by_id
+		modified_at :datetime
+		modified_by_account_type_id modified_by_account_type:references
+		modified_by_id modified_by:references
+
+		rails generate model Student student_id_prefix:string student_id:string first_name:string last_name:string middle_name:string name_prefix:string name_suffix:string status address:references telephone_number:string mobile_number email:string birthdate:date birthplace:string civil_status:references gender:references religion:string nationality:string blood_type:string weight:integer height:float father_name:string father_last_name:string father_middle_name:string father_contact_number mother_name:string mother_maiden_last_name:string mother_maiden_middle_name:string mother_contact_number guardian_fullname:string guardian_relationship:references guardian_contact_number modified_at:datetime modified_by_account_type:references modified_by:references
 
 	address belongs_to :student, belongs_to :faculty
 		id
