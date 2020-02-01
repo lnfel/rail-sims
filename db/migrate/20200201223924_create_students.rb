@@ -33,7 +33,6 @@ class CreateStudents < ActiveRecord::Migration[6.0]
       t.string :guardian_fullname
       t.references :guardian_relationship, null: false, foreign_key: true
       t.integer :guardian_contact_number, array: true, default: []
-      t.datetime :modified_at
       t.references :modified_by_account_type, null: false, foreign_key: true
       t.references :modified_by, null: false, foreign_key: true
 

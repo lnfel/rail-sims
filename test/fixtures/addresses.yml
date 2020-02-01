@@ -1,0 +1,43 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  house_number: 1
+  block: MyString
+  phase: MyString
+  building_number: 1
+  building_name: MyString
+  floor_number: 1
+  room_number: MyString
+  street_name: MyString
+  subdivision: MyString
+  compound: MyString
+  district: MyString
+  municipality: one
+  city: one
+  region: one
+  country: one
+  zip_code: MyString
+  modified_at: 2020-02-02 06:56:47
+  modified_by_account_type: one
+  modified_by: one
+
+two:
+  house_number: 1
+  block: MyString
+  phase: MyString
+  building_number: 1
+  building_name: MyString
+  floor_number: 1
+  room_number: MyString
+  street_name: MyString
+  subdivision: MyString
+  compound: MyString
+  district: MyString
+  municipality: two
+  city: two
+  region: two
+  country: two
+  zip_code: MyString
+  modified_at: 2020-02-02 06:56:47
+  modified_by_account_type: two
+  modified_by: two

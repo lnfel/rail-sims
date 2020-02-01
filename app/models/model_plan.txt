@@ -35,7 +35,7 @@ Data Models
 		guardian_relationship_id
 		guardian_contact_number[]
 		created_at
-		modified_at :datetime
+		modified_at :datetime X
 		modified_by_account_type_id modified_by_account_type:references
 		modified_by_id modified_by:references
 
@@ -60,9 +60,11 @@ Data Models
 		country_id
 		zip_code
 		created_at
-		modified_at
+		modified_at X
 		modified_by_account_type
 		modified_by_id
+
+		rails generate model Address house_number:integer block:string phase:string building_number:integer building_name:string floor_number:integer room_number:string street_name:string subdivision:string compound:string district:string municipality:references city:references region:references country:references zip_code:string modified_at:datetime modified_by_account_type:references modified_by:references
 
 	account
 		id
