@@ -6,22 +6,22 @@ class Address < ApplicationRecord
   belongs_to :modified_by_account_type
   belongs_to :modified_by
 
-  validate :house_number, presence: false
-  validate :block, presence: false
-  validate :phase, presence: false
-  validate :building_number, presence: false
-  validate :building_name, presence: false
-  validate :floor_number, presence: false
-  validate :room_number, presence: false
-  validate :street_name, presence: false
-  validate :subdivision, presence: false
-  validate :compound, presence: false
-  validate :district, presence: false
-  validate :municipality, presence: false
-  validate :city, presence: false
-  validate :region, presence: false
-  validate :country, presence: false
-  validate :zip_code, presence: false
-  validate :modified_by_account_type, presence: false
-  validate :modified_by, presence: false
+  validates :house_number, presence: false
+  validates :block, presence: false
+  validates :phase, presence: false
+  validates :building_number, presence: false
+  validates :building_name, presence: false
+  validates :floor_number, presence: false
+  validates :room_number, presence: false
+  validates :street_name, presence: false
+  validates :subdivision, presence: false
+  validates :compound, presence: false
+  validates :district, presence: false
+  validates :municipality, presence: false
+  validates :city, presence: false
+  validates :region, presence: false
+  validates :country, presence: false
+  validates :zip_code, presence: false
+  validates :modified_by_account_type, presence: false
+  validates :modified_by, presence: false
 end

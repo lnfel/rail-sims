@@ -9,14 +9,14 @@ class CreateStudents < ActiveRecord::Migration[6.0]
       t.string :name_prefix
       t.string :name_suffix
       t.string :status
-      t.references :address, foreign_key: true
+      t.references :address, null: true, foreign_key: true
       t.string :telephone_number
       t.integer :mobile_number, array: true, default: []
       t.string :email
       t.date :birthdate
       t.string :birthplace
-      t.references :civil_status, foreign_key: true
-      t.references :gender, foreign_key: true
+      t.references :civil_status, null: true, foreign_key: true
+      t.references :gender, null: true, foreign_key: true
       t.string :religion
       t.string :nationality
       t.string :blood_type
@@ -31,10 +31,10 @@ class CreateStudents < ActiveRecord::Migration[6.0]
       t.string :mother_maiden_middle_name
       t.integer :mother_contact_number, array: true, default: []
       t.string :guardian_fullname
-      t.references :guardian_relationship, foreign_key: true
+      t.references :guardian_relationship, null: true, foreign_key: true
       t.integer :guardian_contact_number, array: true, default: []
-      t.references :modified_by_account_type, foreign_key: true
-      t.references :modified_by, foreign_key: true
+      t.references :modified_by_account_type, null: true, foreign_key: true
+      t.references :modified_by, null: true, foreign_key: true
 
       t.timestamps
     end
