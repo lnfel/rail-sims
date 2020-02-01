@@ -41,7 +41,8 @@ Data Models
 
 		rails generate model Student student_id_prefix:string student_id:string first_name:string last_name:string middle_name:string name_prefix:string name_suffix:string status address:references telephone_number:string mobile_number:integer email:string birthdate:date birthplace:string civil_status:references gender:references religion:string nationality:string blood_type:string weight:integer height:float father_name:string father_last_name:string father_middle_name:string father_contact_number:integer mother_name:string mother_maiden_last_name:string mother_maiden_middle_name:string mother_contact_number:integer guardian_fullname:string guardian_relationship:references guardian_contact_number:integer modified_at:datetime modified_by_account_type:references modified_by:references
 
-		Student.create(first_name: "Dale Ryan", last_name: "Aldover", address_id: 1)
+		Student.create(first_name: "Dale Ryan", last_name: "Aldover", address_id: 1, created_at: Time.now, updated_at: Time.now)
+		Student.create(first_name: nil).valid?
 
 	address has_one :student, belongs_to :faculty
 		id
