@@ -10,7 +10,7 @@ require("channels")
 require("stylesheets/application.scss")
 
 // Load application.scss
-//import "../stylesheets/application"
+import "../stylesheets/application"
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
