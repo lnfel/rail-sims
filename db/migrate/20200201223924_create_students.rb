@@ -11,7 +11,7 @@ class CreateStudents < ActiveRecord::Migration[6.0]
       t.string :status
       t.references :address, null: false, foreign_key: true
       t.string :telephone_number
-      t.string :mobile_number
+      t.integer :mobile_number, array: true, default: []
       t.string :email
       t.date :birthdate
       t.string :birthplace
@@ -25,14 +25,14 @@ class CreateStudents < ActiveRecord::Migration[6.0]
       t.string :father_name
       t.string :father_last_name
       t.string :father_middle_name
-      t.string :father_contact_number
+      t.integer :father_contact_number, array: true, default: []
       t.string :mother_name
       t.string :mother_maiden_last_name
       t.string :mother_maiden_middle_name
-      t.string :mother_contact_number
+      t.integer :mother_contact_number, array: true, default: []
       t.string :guardian_fullname
       t.references :guardian_relationship, null: false, foreign_key: true
-      t.string :guardian_contact_number
+      t.integer :guardian_contact_number, array: true, default: []
       t.datetime :modified_at
       t.references :modified_by_account_type, null: false, foreign_key: true
       t.references :modified_by, null: false, foreign_key: true
