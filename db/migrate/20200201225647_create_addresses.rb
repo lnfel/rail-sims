@@ -12,13 +12,13 @@ class CreateAddresses < ActiveRecord::Migration[6.0]
       t.string :subdivision
       t.string :compound
       t.string :district
-      t.references :municipality, null: false, foreign_key: true
-      t.references :city, null: false, foreign_key: true
-      t.references :region, null: false, foreign_key: true
-      t.references :country, null: false, foreign_key: true
+      t.references :municipality, foreign_key: true
+      t.references :city, foreign_key: true
+      t.references :region, foreign_key: true
+      t.references :country, foreign_key: true
       t.string :zip_code
-      t.references :modified_by_account_type, null: false, foreign_key: true
-      t.references :modified_by, null: false, foreign_key: true
+      t.references :modified_by_account_type, foreign_key: true
+      t.references :modified_by, foreign_key: true
 
       t.timestamps
     end
